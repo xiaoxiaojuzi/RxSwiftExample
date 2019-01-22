@@ -13,6 +13,7 @@ import SnapKit
 
 class ViewController: UIViewController {
     var suggestionTextView = UITextView()
+    var contactTextField = UITextField()
     var charLimitlabel = UILabel()
     var submitButton = UIButton()
     let disposeBag = DisposeBag()
@@ -35,25 +36,33 @@ class ViewController: UIViewController {
         suggestionTextView.layer.borderColor = borderColor
         view.addSubview(suggestionTextView)
         suggestionTextView.snp.makeConstraints { (make) in
-            make.width.height.equalTo(200)
+            make.trailing.equalToSuperview().offset(-16)
+            make.leading.equalToSuperview().offset(16)
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().offset(60)
+            make.height.equalTo(150)
         }
         charLimitlabel.textColor = .red
-        charLimitlabel.textAlignment = .center
+        charLimitlabel.textAlignment = .right
         charLimitlabel.numberOfLines = 0
         view.addSubview(charLimitlabel)
         charLimitlabel.snp.makeConstraints { (make) in
+            make.top.equalTo(suggestionTextView.snp.bottom).offset(-20)
+            make.trailing.equalTo(suggestionTextView.snp.trailing)
+        }
+        view.addSubview(contactTextField)
+        contactTextField.layer.borderWidth = borderWidth
+        contactTextField.layer.borderColor = borderColor
+        contactTextField.snp.makeConstraints { (make) in
+            make.leading.trailing.equalTo(suggestionTextView)
             make.top.equalTo(suggestionTextView.snp.bottom).offset(20)
-            make.centerX.equalToSuperview()
-            make.left.equalToSuperview().offset(16)
-            make.right.equalToSuperview().offset(-16)
+            make.height.equalTo(44)
         }
         view.addSubview(submitButton)
         submitButton.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(16)
-            make.right.equalToSuperview().offset(-16)
-            make.top.equalTo(charLimitlabel.snp.bottom).offset(8)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
+            make.top.equalTo(contactTextField.snp.bottom).offset(8)
             make.height.equalTo(40)
         }
         submitButton.layer.cornerRadius = 20
