@@ -55,23 +55,26 @@ class ViewController: UIViewController {
             make.top.equalToSuperview().offset(60)
             make.height.equalTo(150)
         }
-        charLimitlabel.textColor = .red
+        charLimitlabel.textColor = UIColor.RxSwiftExample.gray
         charLimitlabel.textAlignment = .right
         charLimitlabel.numberOfLines = 0
         view.addSubview(charLimitlabel)
         charLimitlabel.snp.makeConstraints { (make) in
-            make.top.equalTo(suggestionTextView.snp.bottom).offset(-20)
-            make.trailing.equalTo(suggestionTextView.snp.trailing)
+            make.top.equalTo(suggestionTextView.snp.bottom).offset(-26)
+            make.trailing.equalTo(suggestionTextView.snp.trailing).offset(-4)
         }
         view.addSubview(contactTextField)
         contactTextField.layer.borderWidth = borderWidth
         contactTextField.layer.borderColor = borderColor
+        contactTextField.backgroundColor = .white
         contactTextField.snp.makeConstraints { (make) in
             make.leading.trailing.equalTo(suggestionTextView)
             make.top.equalTo(suggestionTextView.snp.bottom).offset(20)
             make.height.equalTo(44)
         }
         view.addSubview(submitButton)
+        submitButton.setTitle("提交", for: .normal)
+        submitButton.setTitleColor(.white, for: .normal)
         submitButton.snp.makeConstraints { (make) in
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().offset(-16)
