@@ -11,9 +11,8 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
-let limitCountForSuggestion = 200
-
 class ViewController: UIViewController {
+    let limitCountForSuggestion = 200
     var suggestionTextView = UITextView()
     var contactTextField = UITextField()
     var charLimitlabel = UILabel()
@@ -21,25 +20,8 @@ class ViewController: UIViewController {
     let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         configUI()
-        let suggestionTextViewInput = suggestionTextView.rx.text.orEmpty
-        suggestionTextViewInput.map { "\($0.count)/200"}
-            .bind(to: charLimitlabel.rx.text)
-            .disposed(by: disposeBag)
-        suggestionTextViewInput.map { String($0.prefix(limitCountForSuggestion)) }
-            .bind(to: suggestionTextView.rx.text)
-            .disposed(by: disposeBag)
-        let suggestionTextViewValid = suggestionTextViewInput.map { $0.count > 0}
-        let contactTextFieldValid = contactTextField.rx.text.orEmpty.map { $0.count > 0}
-        Observable.combineLatest(suggestionTextViewValid, contactTextFieldValid) { $0 && $1 }
-            .subscribe(onNext: { [weak self] isEnable in
-                self?.setSubmitButtonSatus(isEnable: isEnable)
-            })
-            .disposed(by: disposeBag)
-        submitButton.rx.tap
-            .subscribe(onNext: { [weak self] in
-                self?.showSubmitSuccessfully()
-            }).disposed(by: disposeBag)
     }
     func configUI() {
         view.backgroundColor = UIColor.RxSwiftExample.TableViewBackgroud
@@ -89,7 +71,7 @@ class ViewController: UIViewController {
         submitButton.isEnabled = isEnable
         submitButton.backgroundColor = isEnable ? UIColor.RxSwiftExample.lightOrange : UIColor.RxSwiftExample.gray
     }
-    func showSubmitSuccessfully() {
+    @objc func showSubmitSuccessfully() {
         let alert = UIAlertController.init(title: "", message: "提交成功", preferredStyle: .alert)
         let ok = UIAlertAction(title: "确定", style: .default, handler: nil)
         alert.addAction(ok)

@@ -17,6 +17,8 @@
 		AE1EF02721F71B18000B72BC /* RxSwiftExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1EF02621F71B18000B72BC /* RxSwiftExampleTests.swift */; };
 		AE1EF03221F71B18000B72BC /* RxSwiftExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1EF03121F71B18000B72BC /* RxSwiftExampleUITests.swift */; };
 		AE8B2ED121F7459C0008F835 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B2ED021F7459C0008F835 /* UIColorExtension.swift */; };
+		AE8B2ED321F7ED5D0008F835 /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B2ED221F7ED5D0008F835 /* RxSwiftViewController.swift */; };
+		AE8B2ED521F7EF4F0008F835 /* NormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B2ED421F7EF4F0008F835 /* NormalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		AE1EF03121F71B18000B72BC /* RxSwiftExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftExampleUITests.swift; sourceTree = "<group>"; };
 		AE1EF03321F71B18000B72BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE8B2ED021F7459C0008F835 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		AE8B2ED221F7ED5D0008F835 /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
+		AE8B2ED421F7EF4F0008F835 /* NormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 				AE1EF01D21F71B17000B72BC /* Info.plist */,
 				AE1EF01521F71B16000B72BC /* RxSwiftExample.xcdatamodeld */,
 				AE8B2ED021F7459C0008F835 /* UIColorExtension.swift */,
+				AE8B2ED221F7ED5D0008F835 /* RxSwiftViewController.swift */,
+				AE8B2ED421F7EF4F0008F835 /* NormalViewController.swift */,
 			);
 			path = RxSwiftExample;
 			sourceTree = "<group>";
@@ -313,7 +319,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE1EF01121F71B16000B72BC /* ViewController.swift in Sources */,
+				AE8B2ED521F7EF4F0008F835 /* NormalViewController.swift in Sources */,
 				AE1EF01721F71B16000B72BC /* RxSwiftExample.xcdatamodeld in Sources */,
+				AE8B2ED321F7ED5D0008F835 /* RxSwiftViewController.swift in Sources */,
 				AE1EF00F21F71B16000B72BC /* AppDelegate.swift in Sources */,
 				AE8B2ED121F7459C0008F835 /* UIColorExtension.swift in Sources */,
 			);
