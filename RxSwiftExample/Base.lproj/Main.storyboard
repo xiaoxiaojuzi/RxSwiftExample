@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--我是Rx-->
         <scene sceneID="VeS-i3-hRP">
             <objects>
                 <viewController id="VlI-iW-aPc" customClass="RxSwiftViewController" customModule="RxSwiftExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,13 +20,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LWW-Ic-SWh"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="quK-Xf-1OP" userLabel="我是Rx"/>
+                    <tabBarItem key="tabBarItem" title="我是Rx" image="myInfoDiscount" id="quK-Xf-1OP" userLabel="我是Rx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7pf-wq-Ic0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-78" y="189"/>
         </scene>
-        <!--Item 1-->
+        <!--我是普通-->
         <scene sceneID="JPt-1j-Rob">
             <objects>
                 <viewController id="wRq-5O-8kr" customClass="NormalViewController" customModule="RxSwiftExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,7 +36,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Qr2-TZ-6Na"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="oO0-1Y-nOA" userLabel="我是普通"/>
+                    <tabBarItem key="tabBarItem" title="我是普通" image="myinfoYellowmedal" id="oO0-1Y-nOA" userLabel="我是普通"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nZ-VA-6GH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,7 +45,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="CG1-bO-1fJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KJL-Lz-BeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="52t-Ud-iZ2" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ec5-7t-ACh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -57,8 +56,13 @@
                         <segue destination="VlI-iW-aPc" kind="relationship" relationship="viewControllers" id="D7t-Bu-hHr"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KJL-Lz-BeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1030" y="-143"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="myInfoDiscount" width="24" height="24"/>
+        <image name="myinfoYellowmedal" width="14" height="16"/>
+    </resources>
 </document>
